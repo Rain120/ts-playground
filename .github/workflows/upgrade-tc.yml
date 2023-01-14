@@ -1,9 +1,11 @@
 name: update type-challenges questions
+
 on:
   schedule:
 		# https://tool.lu/crontab/
 		# 每周日 0点更新
     - cron: 0 0 * * 0
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
