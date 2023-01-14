@@ -1,48 +1,44 @@
-# 定时更新题目
-
 name: update type-challenges questions
-  on:
-    schedule:
-      # https://tool.lu/crontab/
-      # 每周日 0点更新
-      - cron: "0 0 * * 0"
-
+on:
+  schedule:
+		# https://tool.lu/crontab/
+		# 每周日 0点更新
+    - cron: 0 0 * * 0
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node_version: [>16]
+        node_version:
+          - 16
+          - 17
+          - 18
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout 🚀
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 7.0.0-rc.9
-
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: 'Use Node.js ${{ matrix.node-version }}'
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          node-version: '${{ matrix.node-version }}'
+          cache: pnpm
 
-      - name: Install
+      - name: Install & fetch
         run: |
           pnpm install
           pnpm run fetch-tc
 
-      - name: Commit files 🚀
+      - name: Commit Files 🚀
         run: |
           git config --global user.name 'Rain120'
           git config --global user.email '1085131904@qq.com'
           git commit -am "[bot] update type-challenges questions"
 
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.ACCESS_TOKEN }}
-        branch: ${{ github.ref }}
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+				with:
+        	github_token: ${{ secrets.ACCESS_TOKEN }}
