@@ -1,0 +1,25 @@
+{
+  "name": "ts-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "mv-qs-data": "rm ./challenges/old.json && mv ./challenges/new.json ./challenges/old.json",
+    "fetch-tc": "cd challenges && npm run mv-qs-data && node --experimental-modules index.mjs"
+  },
+  "keywords": [
+    "playground",
+    "typescript",
+    "ts",
+    "studying"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">16"
+  },
+  "devDependencies": {
+    "node-fetch": "^3.3.0"
+  }
+}
