@@ -15,6 +15,14 @@
 
 推荐，VS Code分屏操作，快如闪电❤️❤️❤️
 
+#### 原始题目
+
+![image](https://user-images.githubusercontent.com/20939839/212466458-425ee8aa-f116-4203-b4b1-825124f42962.png)
+
+#### 解决之后
+
+![image](https://user-images.githubusercontent.com/20939839/212466638-bfb7b5f8-5d51-4d07-9af6-bec09ad62e63.png)
+
 README.md
 > 题目描述
 
