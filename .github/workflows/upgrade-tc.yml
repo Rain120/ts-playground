@@ -2,8 +2,8 @@ name: update type-challenges questions
 
 on:
   schedule:
-		# https://tool.lu/crontab/
-		# 每周日 0点更新
+    # https://tool.lu/crontab/
+    # 每周日 0点更新
     - cron: 0 0 * * 0
 
 jobs:
