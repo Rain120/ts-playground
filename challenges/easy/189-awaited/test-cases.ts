@@ -1,4 +1,4 @@
-import { MyAwaited } from './template';
+import { MyAwaited, MyAwaited2 } from './template';
 import type { Equal, Expect } from '../../../utils';
 
 type X = Promise<string>
@@ -15,5 +15,12 @@ type cases = [
   Expect<Equal<MyAwaited<T>, number>>,
 ]
 
-// @ts-expect-error
+type cases2 = [
+  Expect<Equal<MyAwaited2<X>, string>>,
+  Expect<Equal<MyAwaited2<Y>, { field: number }>>,
+  Expect<Equal<MyAwaited2<Z>, string | number>>,
+  Expect<Equal<MyAwaited2<Z1>, string | boolean>>,
+  Expect<Equal<MyAwaited2<T>, number>>,
+]
+
 type error = MyAwaited<number>
