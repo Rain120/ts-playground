@@ -35,12 +35,13 @@ jobs:
 
       - name: Commit Files 🚀
         run: |
-          git config --global user.name 'Rain120'
-          git config --global user.email '1085131904@qq.com'
+          git config --local user.name 'Rain120'
+          git config --local user.email '1085131904@qq.com'
           git commit -am "[bot] update type-challenges questions"
-          git push
+          # git push
 
-      # - name: Push Changes
-      #   uses: ad-m/github-push-action@master
-      # 	with:
-      #   	github_token: ${{ secrets.ACCESS_TOKEN }}
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+      	with:
+        	github_token: ${{ secrets.ACCESS_TOKEN }}
+          branch: ${{ github.ref }}
