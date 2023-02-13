@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@latest
         with:
           version: 7.0.0-rc.9
       - name: 'Use Node.js ${{ matrix.node-version }}'

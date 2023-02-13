@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "mv-qs-data": "rm ./challenges/old.json && mv ./challenges/new.json ./challenges/old.json",
-    "fetch-tc": "cd challenges && npm run mv-qs-data && node --experimental-modules index.mjs"
+    "mv-qs-data": "rm ./challenges/old.json && cp ./challenges/new.json ./challenges/old.json && echo \"[]\" > ./challenges/new.json",
+    "fetch-tc": "npm run mv-qs-data && node --experimental-modules index.mjs"
   },
   "keywords": [
     "playground",
