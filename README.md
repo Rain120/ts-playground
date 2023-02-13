@@ -67,10 +67,10 @@ test-cases.ts
 
 #### Medium
 
-- [ ] [2-return-type](./challenges/medium/2-return-type/question.md)
-- [ ] [3-omit](./challenges/medium/3-omit/question.md)
-- [ ] [8-readonly-2](./challenges/medium/8-readonly-2/question.md)
-- [ ] [9-deep-readonly](./challenges/medium/9-deep-readonly/question.md)
+- [x] [2-return-type](./challenges/medium/2-return-type/question.md)
+- [x] [3-omit](./challenges/medium/3-omit/question.md)
+- [x] [8-readonly-2](./challenges/medium/8-readonly-2/question.md)
+- [x] [9-deep-readonly](./challenges/medium/9-deep-readonly/question.md)
 - [ ] [10-tuple-to-union](./challenges/medium/10-tuple-to-union/question.md)
 - [ ] [12-chainable-options](./challenges/medium/12-chainable-options/question.md)
 - [ ] [15-last](./challenges/medium/15-last/question.md)
