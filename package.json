@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "mv-qs-data": "rm ./challenges/old.json && cp ./challenges/new.json ./challenges/old.json && echo \"[]\" > ./challenges/new.json",
+    "clear": "echo \"[]\" > ./challenges/new.json",
+    "mv-data": "cp ./challenges/new.json ./challenges/old.json",
+    "mv-qs-data": "rm ./challenges/old.json && npm run mv-data && npm run clear",
     "fetch-tc": "npm run mv-qs-data && node --experimental-modules index.mjs"
   },
   "keywords": [
